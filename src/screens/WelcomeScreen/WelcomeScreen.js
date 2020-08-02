@@ -1,5 +1,6 @@
 import React from 'react';
 import { ImageBackground, View, Image, Text } from 'react-native';
+
 import styles from './styles';
 
 export default function WelcomeScreen() {
