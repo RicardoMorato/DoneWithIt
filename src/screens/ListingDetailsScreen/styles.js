@@ -20,6 +20,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
   },
+  userContainer: {
+    marginVertical: 40,
+  }
 });
 
 export default styles;
