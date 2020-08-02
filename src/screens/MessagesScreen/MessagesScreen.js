@@ -4,7 +4,7 @@ import { FlatList, View } from 'react-native';
 import styles from './styles';
 import { ListItem } from '../../components/ListItem';
 import { Screen } from '../../components/Screen';
-import ListItemSeparator from '../../components/ListItemSeparator/ListItemSeparator';
+import ListItemSeparator from '../../components/ListItem/ListItemSeparator/ListItemSeparator';
 
 // Fictional static data
 const messages = [
