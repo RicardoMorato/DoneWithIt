@@ -3,9 +3,9 @@ import { SafeAreaView } from 'react-native';
 
 import styles from './styles';
 
-export default function Screen({ children }) {
+export default function Screen({ children, style }) {
   return (
-    <SafeAreaView style={styles.screen}>
+    <SafeAreaView style={[styles.screen, style]}>
       {children}
     </SafeAreaView>
   );
