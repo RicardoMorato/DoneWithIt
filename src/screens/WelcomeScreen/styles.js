@@ -18,15 +18,14 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
-  loginButton: {
-    width: '100%',
-    height: 70,
-    backgroundColor: colors.primary,
+  tagline: {
+    fontSize: 23,
+    fontWeight: '700',
+    paddingVertical: 20,
   },
-  registerButton: {
+  buttonsContainer: {
     width: '100%',
-    height: 70,
-    backgroundColor: colors.secondary,
+    padding: 20,
   },
 });
 
