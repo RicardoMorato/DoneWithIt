@@ -4,26 +4,18 @@ import colors from '../../global/colors';
 
 const styles = StyleSheet.create({
   closeIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: colors.primary,
     position: 'absolute',
-    top: 40,
-    left: 20,
-    zIndex: 2,
+    top: 15,
+    left: 15,
   },
   container: {
     backgroundColor: colors.black,
     flex: 1,
   },
   deleteIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: colors.secondary,
     position: 'absolute',
-    top: 40,
-    right: 20,
-    zIndex: 2,
+    top: 15,
+    right: 15,
   },
   image: {
     width: '100%',

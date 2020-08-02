@@ -8,6 +8,6 @@ import { ListingDetailsScreen } from './src/screens/ListingDetailsScreen';
 
 export default function App() {
   return (
-    <ListingDetailsScreen />
+    <ViewImageScreen />
   );
 }
