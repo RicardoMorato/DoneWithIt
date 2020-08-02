@@ -1,9 +1,10 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 
 import styles from './styles';
 import { ListItem } from '../../components/ListItem';
 import { Screen } from '../../components/Screen';
+import ListItemSeparator from '../../components/ListItemSeparator/ListItemSeparator';
 
 // Fictional static data
 const messages = [
@@ -34,6 +35,7 @@ export default function MessagesScreen() {
             image={item.image}
           />
         }
+        ItemSeparatorComponent={ListItemSeparator}
       />
     </Screen>
   );
