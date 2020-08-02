@@ -30,21 +30,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 10,
   },
-  primary: {
-    backgroundColor: colors.primary,
-  },
-  secondary: {
-    backgroundColor: colors.secondary,
-  },
   optionDescription: {
     fontWeight: '600',
     fontSize: 16,
   },
   marginTop: {
     marginTop: 15,
-  },
-  yellow: {
-    backgroundColor: colors.yellow,
   },
 });
 
