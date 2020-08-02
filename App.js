@@ -5,9 +5,10 @@ import ViewImageScreen from './src/screens/ViewImageScreen/ViewImageScreen';
 import { View } from 'react-native';
 import { Card } from './src/components/Card';
 import { ListingDetailsScreen } from './src/screens/ListingDetailsScreen';
+import { MessagesScreen } from './src/screens/MessagesScreen';
 
 export default function App() {
   return (
-    <ViewImageScreen />
+    <MessagesScreen />
   );
 }
