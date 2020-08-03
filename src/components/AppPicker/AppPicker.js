@@ -7,7 +7,7 @@ import colors from '../../global/colors';
 import { Screen } from '../Screen';
 import { PickerItem } from '../PickerItem';
 
-export default function AppPicker({ icon, items, placeholder }) {
+export default function AppPicker({ icon, items, onSelectedItem, placeholder, selectedItem }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -23,7 +23,7 @@ export default function AppPicker({ icon, items, placeholder }) {
             />
           }
 
-        <Text style={styles.text}>{placeholder}</Text>
+        <Text style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</Text>
 
         <MaterialCommunityIcons
           name='chevron-down'
@@ -41,7 +41,10 @@ export default function AppPicker({ icon, items, placeholder }) {
             renderItem={({ item }) =>
               <PickerItem
                 label={item.label}
-                onPress={() => {}}
+                onPress={() => {
+                  setModalVisible(false);
+                  onSelectedItem(item);
+                }}
               />
             }
           />

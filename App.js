@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ListingScreen } from './src/screens/ListingScreen';
 import { AppTextInput } from './src/components/AppTextInput';
@@ -12,9 +12,17 @@ const categories = [
 ];
 
 export default function App() {
+  const [category, setCategory] = useState(categories[0]);
+
   return (
     <Screen>
-      <AppPicker items={categories} placeholder='Category' icon='apps' />
+      <AppPicker
+        selectedItem={category}
+        onSelectedItem={item => setCategory(item)}
+        items={categories}
+        placeholder='Category'
+        icon='apps'
+      />
       <AppTextInput placeholder='Email' icon='email' />
     </Screen>
   );
