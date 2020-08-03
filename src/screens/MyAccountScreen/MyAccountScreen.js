@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 
 import styles from './styles';
 import { Screen } from '../../components/Screen';
@@ -8,51 +8,59 @@ import ListItemSeparator from '../../components/ListItem/ListItemSeparator/ListI
 import { Icon } from '../../components/Icon';
 import colors from '../../global/colors';
 
+const menuItems = [
+  {
+    title: 'My Listings',
+    icon: {
+      name: 'format-list-bulleted',
+      backgroundColor: colors.primary,
+    }
+  },
+  {
+    title: 'My Messages',
+    icon: {
+      name: 'email',
+      backgroundColor: colors.secondary,
+    }
+  },
+];
+
 export default function MyAccountScreen() {
   return (
-    <Screen style={styles.backgroundGrey}>
-      <ListItem
-        title='Mosh Hamedani'
-        subTitle='ricardomorator@hotmail.com'
-        onPress={() => {}}
-        image={require('../../assets/mosh.jpg')}
-        renderRightActions={() => {}}
-        style={styles.accountInfo}
-      />
-
-      <View style={styles.optionsContainer}>
-        <View style={styles.container}>
-          <View style={[ styles.iconContainer, styles.primary ]}>
-            <Icon
-              name='format-list-bulleted'
-              backgroundColor={colors.primary}
-            />
-          </View>
-          <Text style={styles.optionDescription}>My Listings</Text>
-        </View>
-
-        <ListItemSeparator />
-
-        <View style={styles.container}>
-          <View style={[ styles.iconContainer, styles.secondary ]}>
-            <Icon
-              name='email'
-              backgroundColor={colors.secondary}
-            />
-          </View>
-          <Text style={styles.optionDescription}>My Messages</Text>
-        </View>
-
-        <View style={[styles.container, styles.marginTop]}>
-          <View style={[ styles.iconContainer, styles.yellow ]}>
-            <Icon
-              name='logout'
-              backgroundColor={colors.yellow}
-            />
-          </View>
-          <Text style={styles.optionDescription}>Log Out</Text>
-        </View>
+    <Screen style={styles.screen}>
+      <View style={styles.container}>
+        <ListItem
+          title='Mosh Hamedani'
+          subTitle='ricardomorator@hotmail.com'
+          image={require('../../assets/mosh.jpg')}
+          style={styles.accountInfo}
+        />
       </View>
+
+      <View style={styles.container}>
+        <FlatList
+          data={menuItems}
+          keyExtractor={menuItem => menuItem.title}
+          ItemSeparatorComponent={ListItemSeparator}
+          renderItem={({ item }) =>
+            <ListItem
+              title={item.title}
+              textStyle={styles.text}
+              IconComponent={
+                <Icon name={item.icon.name} backgroundColor={item.icon.backgroundColor} />
+              }
+            />
+          }
+        />
+      </View>
+
+      <ListItem
+        title='Log Out'
+        textStyle={styles.text}
+        IconComponent={
+          <Icon name='logout' backgroundColor={colors.yellow} />
+        }
+      />
     </Screen>
   );
 }
