@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+
+import defaultStyles from '../../global/defaultStyles';
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Constants.statusBarHeight,
+    paddingTop: defaultStyles.statusBarHeight,
     flex: 1,
   },
 });

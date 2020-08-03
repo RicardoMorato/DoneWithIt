@@ -14,10 +14,12 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     alignItems: 'center',
   },
-  textInput: defaultStyles.text,
   icon: {
     marginRight: 10,
   },
+  text: {
+    flex: 1,
+  }
 });
 
 export default styles;
