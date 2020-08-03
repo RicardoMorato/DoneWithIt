@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageBackground, View, Image, Text } from 'react-native';
 
 import styles from './styles';
-import { BasicButton } from '../../components/BasicButton';
+import { AppButton } from '../../components/AppButton';
 
 export default function WelcomeScreen() {
   return (
@@ -20,11 +20,11 @@ export default function WelcomeScreen() {
       </View>
 
       <View style={styles.buttonsContainer}>
-        <BasicButton
+        <AppButton
           title='Login'
           onPress={() => {}}
         />
-        <BasicButton
+        <AppButton
           title='Register'
           color='secondaryColor'
           onPress={() => {}}
