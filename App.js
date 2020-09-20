@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { LoginScreen } from './src/screens/LoginScreen';
 
 export default function App() {
@@ -6,3 +6,5 @@ export default function App() {
     <LoginScreen />
   );
 }
+
+// FORMS -> 11: EXERCISES
